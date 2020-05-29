@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- style sheets must go ahead of cytoscape js      -->
+    <link href="style.css" rel="stylesheet" />
+    <script src="js/cytoscape.min.js"></script>
+    <script src="js/cola.min.js"></script>
+    <script src="js/cytoscape-cola.js"></script>
+    <script src="https://unpkg.com/popper.js@1.16.0/dist/umd/popper.js"></script>
+    <script src="js/cytoscape-popper.js"></script>
+  </head>
+  <body>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <h1>hackseqRNA 2020 - Model RNA sample</h1>
+      <a href="https://www.hackseq.com/projects">https://www.hackseq.com/projects</a>
+    <div class="btn-group">
+      <button class="tablink" onclick="window.location.href='/index.html'" >miRNA vs 3UTR</button>
+      <button class="tablink" onclick="window.location.href='/lung_index.html'">miRNA vs Lung enhancer</button>
+      <button class="tablink" onclick="window.location.href='/discontutr.html'">discontinuous miRNA vs 3UTR</button>
+      <button class="tablink" onclick="window.location.href='/discontlung.html'">discontinuous miRNA vs Lung enhancer</button>
+      <button class="tablink" onclick="window.location.href='/random.html'">Random miRNAs vs UTR</button>
+    </div>
+    <div> 
+     <h2 class="noselect">miRNA vs Lung enhancer</h2>
+     <h3 class="noselect">Less than -25 delta G</h3>
+     <p class="noselect">Click on edges for more data.</p>
+     <p class="noselect">Yellow edges closer to -25, red edges closer to -30 and beyond.</p>
+     <button onclick="removeDivs()">Remove all pop-ups</button>
+     <div id="cy"></div>
+    </div>
+
+  <script src="code.js"></script>
+  </body>
+</html>
